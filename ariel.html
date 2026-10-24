@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You ♡</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background: #f8eef0;
+  color: #49363b;
+  font-family: Georgia, serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  padding: 35px 25px;
+  background: #fffaf8;
+  border: 1px solid #ead8d9;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px #6e3c4b12;
+  text-align: center;
+}
+
+.heart {
+  color: #c77b8c;
+  font-size: 35px;
+}
+
+.small {
+  color: #b17b86;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: clamp(27px, 7vw, 37px);
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #bd7889;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover { background: #a96174; }
+
+#letter {
+  display: none;
+  text-align: left;
+  margin-top: 28px;
+  animation: appear 1s ease;
+}
+
+#letter h2 {
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.question {
+  color: #a64f69;
+  font-weight: bold;
+  text-align: center;
+}
+
+.signature {
+  text-align: right;
+  font-style: italic;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+  <div class="heart">♡</div>
+  <p class="small">A LITTLE SOMETHING FOR YOU</p>
+
+  <h1>Hey, you.</h1>
+
+  <p>
+    There's something I've been wanting to tell you.<br>
+    So, I made this little page just for you.
+  </p>
+
+  <button onclick="openLetter()">
+    Open your letter ♡
+  </button>
+
+  <section id="letter">
+    <h2>To the girl who slowly became someone special</h2>
+
+    <p>
+      I don't know exactly when it happened, but at first,
+      I kept telling myself not to develop feelings for you.
+    </p>
+
+    <p>
+      Then, little by little, what I thought was just a small
+      crush became something more. Before I even realized it,
+      you had become someone I genuinely liked.
+    </p>
+
+    <p>
+      I even started learning how to solve a Rubik's Cube,
+      just so I'd have something to teach you and another
+      reason to talk to you. It might seem like a small thing,
+      but I guess that's one of the ways you've inspired me
+      without even knowing it.
+    </p>
+
+    <p>
+      Honestly, I really enjoy talking to you. I can't fully
+      explain why, but there's something about you that makes
+      me want to know you more. And the more we talk, the more
+      certain I become about how I feel.
+    </p>
+
+    <p>
+      So, I want to ask you something I've been wanting to
+      say for a while.
+    </p>
+
+    <p class="question">
+      If I asked for your permission to court you,
+      would you let me?
+    </p>
+
+    <p>
+      You don't have to rush your answer. I just wanted to be
+      honest with you and let you know that, somewhere along
+      the way, you became more than just a crush to me.
+    </p>
+
+    <p class="signature">
+      — YUAN ♡
+    </p>
+  </section>
+</main>
+
+<script>
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.querySelector("button").style.display = "none";
+}
+</script>
+</body>
+</html>
