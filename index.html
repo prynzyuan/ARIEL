@@ -169,7 +169,8 @@ na fefeel na sure ako sayo.
   Would you let me court you? ♡
 </p>
 
-<form action="https://formsubmit.co/prynzyuan21@gmail.com"
+
+<form action="https://formsubmit.co/ajax/prynzyuan21@gmail.com"
       method="POST"
       style="text-align:center; margin:24px 0;">
 
@@ -177,6 +178,11 @@ na fefeel na sure ako sayo.
          value="A reply to your confession letter">
 
   <input type="hidden" name="_template" value="table">
+
+
+<input type="hidden" name="_next"
+       value="https://prynzyuan.github.io/">
+
 
   <button type="submit" name="answer"
           value="YES - I'd love to!"
@@ -217,5 +223,36 @@ function openLetter() {
   document.querySelector("button").style.display = "none";
 }
 </script>
+
+<script>
+document.querySelector("form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const button = e.submitter;
+  const answer = button.value;
+
+  const data = new FormData(form);
+  data.set("answer", answer);
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/prynzyuan21@gmail.com", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      document.getElementById("letter").innerHTML =
+        "<h2>Thank you for your answer ♡</h2><p>Your response means a lot.</p>";
+    } else {
+      alert("Hindi naipadala ang sagot. Pakisubukan ulit.");
+    }
+  } catch (error) {
+    alert("May connection problem. Pakisubukan ulit.");
+  }
+});
+</script>
+
 </body>
 </html>
