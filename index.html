@@ -96,10 +96,32 @@ button:hover { background: #a96174; }
 </style>
 </head>
 
+
+
 <body>
 <main class="card">
   <div class="heart">♡</div>
   <p class="small">A LITTLE SOMETHING FOR YOU</p>
+
+
+
+<label for="visitor-name"
+       style="display:block; margin:16px 0 8px; color:#a96174;">
+  Your name ♡
+</label>
+
+<input
+  type="text"
+  id="visitor-name"
+  name="visitor_name"
+  placeholder="Enter your name..."
+  required
+  style="display:block; width:85%; max-width:280px;
+  margin:0 auto 20px; padding:12px;
+  border:1px solid #bd7889; border-radius:12px;
+  background:#fffaf8; color:#5b4148; font-size:15px;"
+>
+
 
   <h1>Hello Nabs:></h1>
 
@@ -116,25 +138,11 @@ button:hover { background: #a96174; }
     <h2>To the girl who slowly became someone special</h2>
 
 
-<div style="margin:24px auto; text-align:center;">
-  <p style="color:#a96174; margin-bottom:10px;">
-    A little song for you ♡
-  </p>
 
-  <iframe
-    width="100%"
-    height="152"
-    style="max-width:350px; border:0; border-radius:12px;"
-    src="https://www.youtube.com/embed/zTGPdM9ve9c"
-    title="A song for you"
-    allow="encrypted-media; picture-in-picture"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
-
-
-    <p>
+    <p><audio id="background-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+s
       I don't know exactly when it happened, but at first,
       I kept telling myself not to develop feelings for you.
     </p>
@@ -202,23 +210,6 @@ na fefeel na sure ako sayo.
 <input type="hidden" name="_next"
        value="https://prynzyuan.github.io/">
 
-<label for="visitor-name"
-       style="display:block; margin:16px 0 8px; color:#a96174;">
-  Your name ♡
-</label>
-
-<input
-  type="text"
-  id="visitor-name"
-  name="visitor_name"
-  placeholder="Enter your name..."
-  required
-  style="display:block; width:85%; max-width:280px;
-  margin:0 auto 20px; padding:12px;
-  border:1px solid #bd7889; border-radius:12px;
-  background:#fffaf8; color:#5b4148; font-size:15px;"
->
-
 
   <button type="submit" name="answer"
           value="YES - I'd love to!"
@@ -253,10 +244,23 @@ na fefeel na sure ako sayo.
   </section>
 </main>
 
+
+
 <script>
 function openLetter() {
   document.getElementById("letter").style.display = "block";
-  document.querySelector("button").style.display = "none";
+
+  const openButton = document.querySelector('button[onclick="openLetter()"]');
+  if (openButton) {
+    openButton.style.display = "none";
+  }
+
+  const music = document.getElementById("background-music");
+  if (music) {
+    music.play().catch(error => {
+      console.log("Music playback was blocked:", error);
+    });
+  }
 }
 </script>
 
