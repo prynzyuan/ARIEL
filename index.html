@@ -142,7 +142,7 @@ button:hover { background: #a96174; }
     <p><audio id="background-music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
-s
+
       I don't know exactly when it happened, but at first,
       I kept telling myself not to develop feelings for you.
     </p>
@@ -207,7 +207,7 @@ na fefeel na sure ako sayo.
   <input type="hidden" name="_template" value="table">
 
 
-<input type="hidden" id="submitted-name" name="visitor_name" value="">
+<input type="hidden" id="submitted-name" name="Visitor Name" value="">
 
 <input type="hidden" name="_next"
        value="https://prynzyuan.github.io/">
@@ -281,12 +281,12 @@ answerForm.addEventListener("submit", async function(e) {
   const answer = button.value;
   const buttons = form.querySelectorAll('button[type="submit"]');
 
-const nameInput = document.getElementById("visitor-name");
-const submittedName = document.getElementById("submitted-name");
-
-if (nameInput && submittedName) {
-  submittedName.value = nameInput.value.trim();
-}
+const data = new FormData(form);
+data.set("answer", answer);
+data.set(
+  "Visitor Name",
+  document.getElementById("visitor-name")?.value.trim() || "Not provided"
+);
 
   form.dataset.sending = "true";
 
