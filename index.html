@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,32 +95,23 @@ button:hover { background: #a96174; }
 </style>
 </head>
 
-
-
 <body>
 <main class="card">
   <div class="heart">♡</div>
   <p class="small">A LITTLE SOMETHING FOR YOU</p>
 
+  <label for="visitor-name" style="display:block; margin:16px 0 8px; color:#a96174;">
+    Your name ♡
+  </label>
 
-
-<label for="visitor-name"
-       style="display:block; margin:16px 0 8px; color:#a96174;">
-  Your name ♡
-</label>
-
-<input
-  type="text"
-  id="visitor-name"
-  name="visitor_name"
-  placeholder="Enter your name..."
-  required
-  style="display:block; width:85%; max-width:280px;
-  margin:0 auto 20px; padding:12px;
-  border:1px solid #bd7889; border-radius:12px;
-  background:#fffaf8; color:#5b4148; font-size:15px;"
->
-
+  <input
+    type="text"
+    id="visitor-name"
+    name="visitor_name"
+    placeholder="Enter your name..."
+    required
+    style="display:block; width:85%; max-width:280px; margin:0 auto 20px; padding:12px; border:1px solid #bd7889; border-radius:12px; background:#fffaf8; color:#5b4148; font-size:15px;"
+  >
 
   <h1>Hello Nabs:></h1>
 
@@ -137,12 +127,11 @@ button:hover { background: #a96174; }
   <section id="letter">
     <h2>To the girl who slowly became someone special</h2>
 
+    <audio id="background-music" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-
-    <p><audio id="background-music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
+    <p>
       I don't know exactly when it happened, but at first,
       I kept telling myself not to develop feelings for you.
     </p>
@@ -153,24 +142,21 @@ button:hover { background: #a96174; }
       you had become someone I genuinely liked.
     </p>
 
+    <p>
+      there's also something I've been wanting to tell you.
+      I wish you could see yourself through my eyes, even just
+      for a moment, because you'd understand how amazing you
+      really are. hindi ko alam paano yon, but somehow, you
+      always find your way into my thoughts. I just can't seem
+      to stop thinking about you
+    </p>
 
-<p>
-  there's also something I've been wanting to tell you.
-  I wish you could see yourself through my eyes, even just
-  for a moment, because you'd understand how amazing you
-  really are. hindi ko alam paano yon, but somehow, you
-  always find your way into my thoughts. I just can't seem
-  to stop thinking about you
-</p>
-
-<p>
- hindi ko alam kung saan tayo dadalhin ng feelings ko, pero gusto pa kita
-makilala pa, and make more memories
-  with you, and see where things could go between us.
-  That's why I want to ask you something from the bottom
-  of my heart.
-</p>
-
+    <p>
+      hindi ko alam kung saan tayo dadalhin ng feelings ko, pero gusto pa kita makilala pa, and make more memories
+      with you, and see where things could go between us.
+      That's why I want to ask you something from the bottom
+      of my heart.
+    </p>
 
     <p>
       I even started learning how to solve a Rubik's Cube,
@@ -182,57 +168,40 @@ makilala pa, and make more memories
 
     <p>
       Honestly, I really enjoy talking to you. Diko talaga ma explain kung paano,
- pero may something sayo na gustong gusto ko, tuwing mag kausap tayo lalo kong
-na fefeel na sure ako sayo.
+      pero may something sayo na gustong gusto ko, tuwing mag kausap tayo lalo kong
+      na fefeel na sure ako sayo.
     </p>
 
     <p>
       So, I want to ask you something I've been wanting to
       say for a while.
     </p>
+     
+    <p class="question">
+      Would you let me court you? ♡
+    </p>
 
-   
-<p class="question">
-  Would you let me court you? ♡
-</p>
+    <form action="https://formsubmit.co/ajax/prynzyuan21@gmail.com"
+          method="POST"
+          style="text-align:center; margin:24px 0;">
 
+      <input type="hidden" name="_subject" value="A reply to your confession letter">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" id="submitted-name" name="Visitor Name" value="">
+      <input type="hidden" name="_next" value="https://prynzyuan.github.io/">
 
-<form action="https://formsubmit.co/ajax/prynzyuan21@gmail.com"
-      method="POST"
-      style="text-align:center; margin:24px 0;">
+      <button type="submit" name="answer"
+              value="YES - I'd love to!"
+              style="margin:6px; padding:14px 30px; border:0; border-radius:30px; background:#bd7889; color:white; cursor:pointer; font-size:15px;">
+        YES ♡
+      </button>
 
-  <input type="hidden" name="_subject"
-         value="A reply to your confession letter">
-
-  <input type="hidden" name="_template" value="table">
-
-
-<input type="hidden" id="submitted-name" name="Visitor Name" value="">
-
-<input type="hidden" name="_next"
-       value="https://prynzyuan.github.io/">
-
-
-  <button type="submit" name="answer"
-          value="YES - I'd love to!"
-          style="margin:6px; padding:14px 30px;
-          border:0; border-radius:30px;
-          background:#bd7889; color:white;
-          cursor:pointer; font-size:15px;">
-    YES ♡
-  </button>
-
-  <button type="submit" name="answer"
-          value="NO - Thank you for understanding."
-          style="margin:6px; padding:14px 30px;
-          border:1px solid #bd7889; border-radius:30px;
-          background:#fffaf8; color:#a96174;
-          cursor:pointer; font-size:15px;">
-    NO ♡
-  </button>
-
-</form>
-
+      <button type="submit" name="answer"
+              value="NO - Thank you for understanding."
+              style="margin:6px; padding:14px 30px; border:1px solid #bd7889; border-radius:30px; background:#fffaf8; color:#a96174; cursor:pointer; font-size:15px;">
+        NO ♡
+      </button>
+    </form>
 
     <p>
       You don't have to rush your answer. I just wanted to be
@@ -245,8 +214,6 @@ na fefeel na sure ako sayo.
     </p>
   </section>
 </main>
-
-
 
 <script>
 function openLetter() {
@@ -266,7 +233,6 @@ function openLetter() {
 }
 </script>
 
-
 <script>
 const answerForm = document.querySelector("form");
 
@@ -281,16 +247,15 @@ answerForm.addEventListener("submit", async function(e) {
   const answer = button.value;
   const buttons = form.querySelectorAll('button[type="submit"]');
 
-const data = new FormData(form);
-data.set("answer", answer);
-data.set(
-  "Visitor Name",
-  document.getElementById("visitor-name")?.value.trim() || "Not provided"
-);
+  const data = new FormData(form);
+  data.set("answer", answer);
+  data.set(
+    "Visitor Name",
+    document.getElementById("visitor-name")?.value.trim() || "Not provided"
+  );
 
   form.dataset.sending = "true";
 
-  // Ipakita agad na may pinoproseso
   buttons.forEach(btn => {
     btn.disabled = true;
     btn.style.opacity = "0.6";
@@ -312,9 +277,6 @@ data.set(
   }
 
   status.textContent = "Sending your answer... Please wait ♡";
-
-  const data = new FormData(form);
-  data.set("answer", answer);
 
   try {
     const response = await fetch(
