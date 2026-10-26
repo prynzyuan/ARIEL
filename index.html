@@ -207,6 +207,8 @@ na fefeel na sure ako sayo.
   <input type="hidden" name="_template" value="table">
 
 
+<input type="hidden" id="submitted-name" name="visitor_name" value="">
+
 <input type="hidden" name="_next"
        value="https://prynzyuan.github.io/">
 
@@ -278,6 +280,13 @@ answerForm.addEventListener("submit", async function(e) {
 
   const answer = button.value;
   const buttons = form.querySelectorAll('button[type="submit"]');
+
+const nameInput = document.getElementById("visitor-name");
+const submittedName = document.getElementById("submitted-name");
+
+if (nameInput && submittedName) {
+  submittedName.value = nameInput.value.trim();
+}
 
   form.dataset.sending = "true";
 
